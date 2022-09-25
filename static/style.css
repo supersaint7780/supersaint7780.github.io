@@ -71,7 +71,7 @@ span.bar {
     transition: all 0.3s ease-in-out;
 }
 
-@media (max-width:768px) {
+@media (max-width:850px) {
     nav {
         padding: 1rem 2rem;
     }
@@ -183,16 +183,18 @@ div.right {
 }
 
 div.right > img {
-    width: auto;
-    height: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 90%;
 }
 
-@media (max-width:768px) {
+@media (max-width:850px) {
     #about {
         padding: 2rem 2rem;
     }
 }
-@media (max-width:425px) {
+@media (max-width:650px) {
     #about {
         flex-direction: column-reverse;
     }
