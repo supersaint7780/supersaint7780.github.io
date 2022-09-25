@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300&family=Playfair+Display&display=swap');
 :root {
     --my-black: #252525
 }
@@ -19,16 +20,19 @@ li {
     list-style: none;
 }
 
+/* navigation section */
 nav {
     display: flex;
-    padding: 1rem 2rem;
+    padding: 1rem 8rem;
     align-items: center;
     justify-content: space-between;
     min-width: 100%;
     border-bottom: 1px solid rgb(216, 216, 216);
     position: sticky;
+    position: -webkit-sticky;
     top: 0;
-    left: 0;
+    background-color: white;
+    font-family: 'Playfair Display','Courier New', Courier, monospace;
 }
 
 div.logo>h1 {
@@ -68,6 +72,9 @@ span.bar {
 }
 
 @media (max-width:768px) {
+    nav {
+        padding: 1rem 2rem;
+    }
     ul.nav-menu {
         flex-direction: column;
         position: fixed;
@@ -103,5 +110,96 @@ span.bar {
     .hamburger.active .bar:nth-child(3) {
         -webkit-transform: translateY(-8px) rotate(-45deg);
         transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* about secton  */
+#about {
+    background-color: white;
+    display: flex;
+    min-height: 90vh;
+    padding: 2rem 8rem;
+}
+#about > div {
+    min-width: 50%;
+}
+div.left {
+    padding: 2rem;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+div.text {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Playfair Display','Courier New', Courier, monospace;
+}
+div.text h1{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+div.text h2{
+    font-size: 2.2rem;
+    color: rgb(255, 0, 85);
+    margin-bottom: 1rem;
+}
+div.text p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Inter Tight', sans-serif;
+    color: rgb(133, 133, 133);
+}
+
+
+div.contact {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+div.social {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 99px;
+    margin: 0.25rem;
+    margin-left: 0;
+    text-align: center;
+    vertical-align: middle;
+    background-color: white;
+}
+.fa-brands:hover {
+    text-shadow: 2px 2px 1rem rgb(184, 184, 184);
+}
+.fa-instagram {
+    color: rgb(255, 0, 140);
+}
+.fa-linkedin-in {
+    color: rgba(61, 61, 255, 0.938);
+}
+
+div.right {
+    text-align: center;
+    height: calc(90vh - 8rem);
+}
+
+div.right > img {
+    width: auto;
+    height: 100%;
+}
+
+@media (max-width:768px) {
+    #about {
+        padding: 2rem 2rem;
+    }
+}
+@media (max-width:425px) {
+    #about {
+        flex-direction: column-reverse;
+    }
+    div.right > img {
+        height: 90%;
+    }
+    div.left {
+        padding: 2rem 0;
     }
 }
