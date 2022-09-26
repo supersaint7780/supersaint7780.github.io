@@ -9,6 +9,10 @@
     padding: 0;
     color: var(--my-black);
 }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4.4rem;
+}
 
 a {
     text-decoration: none;
