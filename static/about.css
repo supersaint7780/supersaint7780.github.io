@@ -42,7 +42,8 @@ div.intro span {
 }
 
 div.right {
-    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 div.right>img {
@@ -54,7 +55,7 @@ div.right>img {
 
 @media (max-width:850px) {
     #about-me {
-        padding: 2rem 2rem;
+        padding: 0rem 2rem;
     }
 }
 
@@ -85,6 +86,11 @@ div.right>img {
     flex-wrap: wrap;
     min-height: 90vh;
     padding: 2rem 8rem;
+}
+@media (max-width:850px) {
+    .tools-skills{
+        padding: 2rem 2rem;
+    }
 }
 section.tools-skills h2 {
     font-size: 2rem;

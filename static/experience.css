@@ -1,0 +1,92 @@
+body {
+    background-color: #F2BE5C;
+}
+section.experience {
+    padding-top: 2rem;
+    min-height: 90vh;
+    background-color: #F2BE5C;
+    position: relative;
+    width: 100%;
+}
+
+section.experience::before {
+    position: absolute;
+    content: "";
+    width: 1rem;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 10vw;
+}
+
+div.container {
+    position: relative;
+    left: 15vw;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    max-width: 70vw;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.container::before {
+
+    content: "";
+    height: 0;
+    position: absolute;
+    top: 1.5rem;
+    width: 0;
+    z-index: 10;
+    left: -0.75rem;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0px;
+    border-color: transparent black transparent transparent;
+}
+
+div.container>h4 {
+    color: rgb(134, 134, 134);
+}
+
+div.workplace-logo {
+    background-color: white;
+    position: absolute;
+    top: 0.5rem;
+    z-index: 5;
+    left: calc(-5vw - 1.5rem);
+    border-radius: 99px;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 5px solid #ffa500;
+}
+
+@media (max-width:1000px) {
+    div.container {
+        left:18vw;
+    }
+    div.workplace-logo {
+        left: calc(-8vw - 1.5rem);
+    }
+}
+
+div.workplace-logo>img {
+    display: block;
+    max-width: 2.25rem;
+    height: auto;
+}
+
+ul {
+    padding-left: 1rem;
+}
+
+ul.content>li {
+    list-style: disc;
+}
